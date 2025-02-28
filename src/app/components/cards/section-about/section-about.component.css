@@ -1,95 +1,104 @@
-.conteiner__card-about-me {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.about {
+  width: 100%;
+  background-color: #191919;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 
-  & .card {
-    width: 320px;
-    border-radius: 25px;
-    background: #fff;
+  & .conteiner__card-about-me {
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    & .image-content,
-    .card-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px 14px;
-    }
+    & .card {
+      width: 320px;
+      border-radius: 25px;
+      background: #fff;
 
-    & .image-content {
-      position: relative;
-      row-gap: 5px;
-      border-radius: 25px 25px 0 25px;
-      padding: 25px 0;
-      & .overlay {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: #707070;
-        border-radius: 25px 25px 0 25px;
+      & .image-content,
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
       }
 
-      & .overlay::before,
-      .overlay::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: -40px;
-        height: 40px;
-        width: 40px;
-        background-color: #707070;
-      }
-      & .overlay::after {
-        border-radius: 0 25px 0 0;
-        background-color: #fff;
-      }
-      & .card-image {
+      & .image-content {
         position: relative;
-        height: 150px;
-        width: 150px;
-        background: #fff;
-        border-radius: 50%;
-        padding: 3px;
-
-        & .card-img {
+        row-gap: 5px;
+        border-radius: 25px 25px 0 25px;
+        padding: 25px 0;
+        & .overlay {
+          position: absolute;
+          left: 0;
+          top: 0;
           height: 100%;
           width: 100%;
-          object-fit: cover;
+          background-color: #707070;
+          border-radius: 25px 25px 0 25px;
+        }
+
+        & .overlay::before,
+        .overlay::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: -40px;
+          height: 40px;
+          width: 40px;
+          background-color: #707070;
+        }
+        & .overlay::after {
+          border-radius: 0 25px 0 0;
+          background-color: #fff;
+        }
+        & .card-image {
+          position: relative;
+          height: 150px;
+          width: 150px;
+          background: #fff;
           border-radius: 50%;
-          border: 1px solid #362e2e;
+          padding: 3px;
+
+          & .card-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 1px solid #362e2e;
+          }
         }
       }
-    }
 
-    & .card-content {
-      & .name {
-        font-size: 18px;
-        font-weight: 500;
-        color: #333;
-      }
+      & .card-content {
+        & .name {
+          font-size: 18px;
+          font-weight: 500;
+          color: #333;
+        }
 
-      & .description {
-        font-size: 18px;
-        color: #707070;
-        text-align: center;
-      }
+        & .description {
+          font-size: 18px;
+          color: #707070;
+          text-align: center;
+        }
 
-      & .button {
-        border: none;
-        font-size: 16px;
-        color: #fff;
-        padding: 8px 16px;
-        background-color: #191919;
-        border-radius: 6px;
-        margin: 14px;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-      }
+        & .button {
+          border: none;
+          font-size: 16px;
+          color: #fff;
+          text-decoration: none;
+          padding: 8px 16px;
+          background-color: #191919;
+          border-radius: 6px;
+          margin: 14px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
 
-      & .button:hover {
-        background-color: #333;
+        & .button:hover {
+          background-color: #333;
+        }
       }
     }
   }

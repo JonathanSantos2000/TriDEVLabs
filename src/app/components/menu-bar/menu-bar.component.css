@@ -70,3 +70,8 @@
 span {
   color: #0338be;
 }
+
+.conteiner__menu-bar > a > img {
+  height: 60px;
+  width: 220px;
+}

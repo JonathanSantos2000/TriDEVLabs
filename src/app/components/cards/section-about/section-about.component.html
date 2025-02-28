@@ -1,21 +1,31 @@
-<section class="conteiner__card-about-me" id="about">
-  <div class="card">
-    <div class="image-content">
-      <span class="overlay"></span>
-      <div class="card-image">
-        <img
-          src="../../../../assets/img/{{ urlImg }}"
-          alt="{{ name }}"
-          class="card-img"
-        />
+<section class="about">
+  <section
+    class="conteiner__card-about-me"
+    id="about"
+    *ngFor="let sobre of sobres"
+  >
+    <div class="card">
+      <div class="image-content">
+        <span class="overlay"></span>
+        <div class="card-image">
+          <img
+            src="../../../../assets/img/fundadores/{{ sobre.urlImg }}"
+            alt="{{ sobre.nome }}"
+            class="card-img"
+          />
+        </div>
+      </div>
+      <div class="card-content">
+        <h2 class="name">{{ sobre.nome }}</h2>
+        <p class="description">
+          {{ sobre.frase }}
+        </p>
+        <ng-container *ngFor="let contato of sobre.contatos">
+          <a class="button" href="{{ contato.urlContato }}">
+            {{ contato.tipo }}
+          </a>
+        </ng-container>
       </div>
     </div>
-    <div class="card-content">
-      <h2 class="name">{{ name }}</h2>
-      <p class="description">
-        {{ Texto }}
-      </p>
-      <button class="button">Saiba Mais</button>
-    </div>
-  </div>
+  </section>
 </section>
