@@ -1,0 +1,44 @@
+<div class="conteinner__login flex-all-collun-center">
+  <form
+    [formGroup]="registerForm"
+    (ngSubmit)="submit()"
+    class="flex-all-collun-center"
+  >
+    <div class="title_logo">
+      <img src="../../../assets/img/logo_quadrada_colorida.png" alt="" />
+      <h3>Criar uma conta</h3>
+    </div>
+    <!-- Nome -->
+    <text-input
+      [control]="fc['name']"
+      [showErrorWhen]="isSubmitted"
+      type="text"
+      label="Nome:"
+    ></text-input>
+    <!-- email -->
+    <text-input
+      [control]="fc['email']"
+      [showErrorWhen]="isSubmitted"
+      type="email"
+      label="Email:"
+    ></text-input>
+    <!-- password -->
+    <text-input
+      [control]="fc['password']"
+      [showErrorWhen]="isSubmitted"
+      type="password"
+      label="Senha:"
+    ></text-input>
+    <!-- confirmPassword -->
+    <text-input
+      [control]="fc['confirmPassword']"
+      [showErrorWhen]="isSubmitted"
+      type="password"
+      label="Confirme a senha:"
+    ></text-input>
+
+    <div class="btns">
+      <button type="submit">Criar</button>
+    </div>
+  </form>
+</div>

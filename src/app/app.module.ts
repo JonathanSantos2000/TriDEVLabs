@@ -9,7 +9,12 @@ import { SectionAboutComponent } from './components/cards/section-about/section-
 import { SectionWorksComponent } from './components/cards/section-works/section-works.component';
 import { SmallCardsComponent } from './components/cards/small-cards/small-cards.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { PageRegistroComponent } from './pages/page-registro/page-registro.component';
+import { PageLoginComponent } from './pages/page-login/page-login.component';
+import { InputValidationComponent } from './components/form/input-validation/input-validation.component';
+import { TextInputComponent } from './components/form/text-input/text-input.component';
+import { InputGroupComponent } from './components/form/input-group/input-group.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,13 +24,15 @@ import { FooterComponent } from './components/footer/footer.component';
     SectionAboutComponent,
     SectionWorksComponent,
     SmallCardsComponent,
-    FooterComponent
+    FooterComponent,
+    PageRegistroComponent,
+    PageLoginComponent,
+    InputGroupComponent,
+    InputValidationComponent,
+    TextInputComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
